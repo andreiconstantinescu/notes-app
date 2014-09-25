@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Simple notetaking app.",
   "main": "index.js",
+
   "repository": {
     "type": "git",
     "url": "https://github.com/andreiconstantinescu/notes-app"
@@ -21,7 +22,6 @@
     "browserify": "^5.9.1",
     "browserify-istanbul": "^0.1.1",
     "compression": "^1.0.9",
-    "coveralls": "^2.11.1",
     "express": "^4.7.2",
     "gulp": "^3.8.6",
     "gulp-autoprefixer": "0.0.8",
@@ -30,7 +30,6 @@
     "gulp-debug": "^1.0.0",
     "gulp-filter": "^1.0.0",
     "gulp-flatten": "0.0.2",
-    "gulp-imagemin": "^1.0.0",
     "gulp-jade": "^0.7.0",
     "gulp-load-plugins": "^0.5.3",
     "gulp-manifest": "0.0.6",
@@ -52,8 +51,6 @@
     "lodash": "^2.4.1",
     "main-bower-files": "^2.0.0",
     "mean-seo": "^0.0.6",
-    "mocha": "^1.21.3",
-    "newrelic": "^1.10.0",
     "ngrok": "^0.1.97",
     "penthouse": "^0.2.5",
     "psi": "^0.1.1",
@@ -63,5 +60,9 @@
     "vinyl-source-stream": "^0.1.1",
     "when": "^3.4.3",
     "wiredep": "^1.8.2"
-  }
+  },
+  "engines": {
+    "node": "0.10.29",
+    "npm" : "1.4.27"
+    }
 }
