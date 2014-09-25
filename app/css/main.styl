@@ -1,0 +1,94 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 14px "Source Sans Pro", "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 1.4em;
+	background: #eeeeee;
+	color: #33333;
+	width: 500px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+#noteapp h1 {
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+#noteapp input[type="text"] {
+	width: 466px;
+	font-size: 24px;
+	font-family: inherit;
+	line-height: 1.4em;
+	border: 0;
+	outline: none;
+  background-color: inherit;
+	padding: 6px;
+
+}
+
+#noteapp input::-webkit-input-placeholder {
+	font-style: italic;
+}
+
+#note-list {
+	margin: 10px 0;
+	padding: 0;
+	list-style: none;
+}
+
+#note-list li {
+	padding: 18px 20px 18px 0;
+	position: relative;
+	font-size: 24px;
+	border-bottom: 1px solid #cccccc;
+}
+
+#note-list li:last-child {
+	border-bottom: none;
+}
+
+#note-list .destroy {
+	position: absolute;
+	right: 0px;
+	top: 20px;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+  padding-left: 5px;
+}
+
+#note-list li.editing {
+	border-bottom: none;
+	margin-top: -1px;
+	padding: 0;
+}
+
+#note-list li.editing:last-child {
+	margin-bottom: -1px;
+}
+
+#note-list li.editing .edit {
+	display: block;
+	width: 444px;
+	padding: 13px 15px 14px 20px;
+	margin: 0;
+}
+
+#note-list li.editing .view {
+	display: none;
+}
+
+#note-list li .view label {
+	word-break: break-word;
+}
+
+#note-list li .edit {
+	display: none;
+}
