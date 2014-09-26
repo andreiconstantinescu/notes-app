@@ -118,7 +118,7 @@ gulp.task('fonts', function () {
 });
 
 // Copies over assets for production.
-gulp.task('assets:dist', function () {
+gulp.task('assets:dist', ['fonts'], function () {
   var imgFilter = $.filter('**/img/**/*.*');
   return gulp.src(paths.app + '/assets/**/*')
     .pipe(imgFilter)
@@ -140,13 +140,14 @@ gulp.task('build', ['build:common', 'js:dev', 'assets']);
 var cssPath = '';
 
 // Production-ready build.
-gulp.task('build:dist:base', ['build:common', 'js'], function () {
+gulp.task('build:dist:base', ['build:common', 'js', 'assets:dist'], function () {
   var jsFilter = $.filter('**/*.js');
   var cssFilter = $.filter('**/*.css');
   var htmlFilter = $.filter('**/*.html');
   var assets = $.useref.assets();
 
   return gulp.src(paths.tmp + '/index.html')
+
     .pipe(assets)
     .pipe($.rev())
 
