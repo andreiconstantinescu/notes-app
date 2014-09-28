@@ -121,12 +121,12 @@ gulp.task('fonts', function () {
 gulp.task('assets:dist', ['fonts'], function () {
   var imgFilter = $.filter('**/img/**/*.*');
   return gulp.src(paths.app + '/assets/**/*')
-    // .pipe(imgFilter)
-    // .pipe($.cache($.imagemin({
-    //   progressive: true,
-    //   interlaced: true
-    // })))
-    // .pipe(imgFilter.restore())
+    .pipe(imgFilter)
+    .pipe($.cache($.imagemin({
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(imgFilter.restore())
     .pipe(gulp.dest(paths.dist + '/assets/'));
 });
 
