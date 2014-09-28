@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Simple notetaking app.",
   "main": "index.js",
+  "scripts": {
+    "install": "./node_modules/bower/bin/bower install && ./node_modules/gulp/bin/gulp.js build:dist"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/andreiconstantinescu/notes-app"
